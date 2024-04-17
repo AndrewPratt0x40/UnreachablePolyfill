@@ -24,7 +24,7 @@ FetchContent_MakeAvailable(UnreachablePolyfill)
 
 add_executable(Foo main.cpp)
 
-target_link_libraries(Foo PUBLIC UnreachablePolyfill::UnreachablePolyfill)
+target_link_libraries(Foo PUBLIC UnreachablePolyfill)
 ```
 When using CMake, the following cache variables are available:
 
