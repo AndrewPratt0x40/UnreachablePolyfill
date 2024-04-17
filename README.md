@@ -27,8 +27,10 @@ add_executable(Foo main.cpp)
 target_link_libraries(Foo PUBLIC UnreachablePolyfill::UnreachablePolyfill)
 ```
 When using CMake, the following cache variables are available:
-|Name|Type|Default|Description|
-|-|-|-|
-|UNREACHABLE_POLYFILL_GLOBAL_NAMESPACE|Boolean|OFF|True if `unreachable()` should be defined globally. False if `unreachable()` should be defined in the namespace named by cache variable UNREACHABLE_POLYFILL_NAMESPACE.|
-|UNREACHABLE_POLYFILL_NAMESPACE|String|"Unreachable_polyfill"|The namespace to define `unreachable()` in.|
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| UNREACHABLE_POLYFILL_GLOBAL_NAMESPACE | Boolean | OFF | True if `unreachable()` should be defined globally. False if `unreachable()` should be defined in the namespace named by cache variable UNREACHABLE_POLYFILL_NAMESPACE. |
+| UNREACHABLE_POLYFILL_NAMESPACE | String | "Unreachable_polyfill" | The namespace to define `unreachable()` in. |
+
 If the symbol `UNREACHABLE_POLYFILL_GLOBAL_NAMESPACE` is defined, then `unreachable()` will be declared globally. Otherwise, it will be defined in the namespace named by cache variable UNREACHABLE_POLYFILL_NAMESPACE.
